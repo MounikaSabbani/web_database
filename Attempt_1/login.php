@@ -27,22 +27,22 @@
 			}
 		}
 		else {
-			$msg = "It looks like we don't have any demographic information about you. Please submit it.";
-			echo '<script type="text/javascript">alert("' . $msg . '")</script>';
-			mysqli_close($conn);
-			header("Location: /~ypenamak/Project/Attempt1/demographic.html?username=".$username);
 			
 			echo '<script type="text/javascript">'; 
-			echo 'alert("review")';
-			echo 'window.location.href = "/~ypenamak/Project/Attempt1/demographic.html?username=".$username"';
+			echo 'alert("It looks like we don not have any demographic information about you. Please submit it.");';		
+			echo 'window.location.href = "/~ypenamak/Project/Attempt1/demographic.html?username='.$username.'"';
 			echo '</script>';
+			mysqli_close($conn);					
+			
 		}
+		
 	}
 	else {
-		$msg = "Wrong username and/or password -- or perhaps you need to register! Try again";
-		echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+		echo '<script type="text/javascript">'; 
+		echo 'alert("Wrong username and/or password -- or perhaps you need to register! Try again");';		
+		echo 'window.location.href = "/~ypenamak/Project/Attempt1/index.html"';
+		echo '</script>';
 		mysqli_close($conn);
-		header('Location: /~ypenamak/Project/Attempt1/index.html');
 	}
 
 
