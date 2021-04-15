@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <style>
+    .instructions {
+      text-align: center;
+    }
+    .demo {
+      text-align: center;
+    }
+  </style>
+  <head>
+    <title>Pothole Management System</title>
+    <!-- Latest compiled CSS v3.4.1 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- jQuery library v3.5.1-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript v3.4.1 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="instructions">
+        <br />
+        <h3>Please Provide Demographic Info Below!</h3>
+      </div>
+    </main>
+    <div class="demo">
+      <form action="demo.php" method="POST">
+        User Name:<br />
+        <input type="text" id="UserName" name="UserName" readonly />
+        <br />
+        First Name:<br />
+        <input type="text" name="FirstName" required />
+        <br />
+        Last Name:<br />
+        <input type="text" name="LastName" required />
+        <br />
+        Full Name:<br />
+        <input type="text" name="FullName" required />
+        <br />
+        Phone:<br />
+        <input type="text" name="Phone" required />
+        <br />
+        Email Address:<br />
+        <input type="text" name="Email" required />
+        <br />
+        Address for delivery:<br />
+        <input type="text" name="Address" required />
+        <br />
+        Subscribe:<br />
+        <input type="text" name="Subscription" required />
+        <br /><br />
+
+        <input type="submit" name="submit" required />
+      </form>
+    </div>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const myParam = urlParams.get("username");
+      document.getElementById("UserName").value = myParam;
+    </script>
+  </body>
+</html>
