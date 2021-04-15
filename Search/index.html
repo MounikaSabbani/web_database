@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <style>
+    .heading {
+      text-align: center;
+    }
+    .instructions {
+      text-align: center;
+    }
+    .search {
+      text-align: center;
+    }
+
+    .form-group.c1,
+    .form-group.c2
+    {
+      display : inline-block;
+      width : 20%;
+      text-align: center;
+    }
+
+  </style>
+  <style>
+    .slidecontainer {
+      width: 20%;
+      position:relative;
+      margin-left:auto;
+      margin-right:auto;                
+    }
+    
+    .slider {
+      -webkit-appearance: center;
+      width: 30%;
+      height: 25px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+    
+    .slider:hover {
+      opacity: 1;
+    }
+    
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      background: #4CAF50;
+      cursor: pointer;
+    }
+    
+    .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      background: #4CAF50;
+      cursor: pointer;
+    }
+    </style>
+  <head>
+    <title>Welcome to Book Search</title>
+    <!-- Latest compiled CSS v3.4.1 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- jQuery library v3.5.1-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript v3.4.1 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--added for Validation -->
+    <script src="validate_fields.js"></script> 
+
+  </head>
+  <body>
+    <main>
+      <div class="heading">
+        <br />
+        <h1>Best Seller Books</h1>
+      </div>
+      <div class="instructions">
+        <h5>Please enter the details below</h5>
+      </div>
+    </main>
+    <div class="search">
+      <!--added for Validation   name = "searchForm" onsubmit="return validateForm()"    added for Validation -->
+      <form name = "searchForm" action="search.php" onsubmit="return validateForm()" method="post">
+        Book Name:<br />
+          <input type="text" name="BOOK_NAME" />
+          <br />
+        Book Author:<br />
+          <input type="text" name="BOOK_AUTHOR"  />
+          <br />
+        Minimum User Rating:<br />
+          <input type="text" name="BOOK_RATINGS"  />
+          <br />
+          <br />
+          <h5>You may choose to enter a range between 2009 and 2019</h5>
+          <div class="form-group c1">
+            Published Year Start: <input type="number" id="start_year" name="start_year" min="2009" max="2019">
+            
+           </div>
+
+        <div class="form-group c2">
+          Published Year End: <input type="number" id="end_year" name="end_year" min="2009" max="2019">
+      </div>
+
+      <br />
+          <br />
+          <label for="BOOK_GENRE">Choose a Genre:</label>
+          <select name="BOOK_GENRE" id="BOOK_GENRE">
+            <option value="">Select</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Non Fiction">Non Fiction</option>           
+            <option value="Both">Both</option>
+          </select>
+          <br />
+        <br />
+
+        <div class="slidecontainer">
+            <input type="range" name="BOOK_PRICE" min="-1" max="150" value="-1" class="slider" id="BOOK_PRICE">
+            <p>Price: <span id="demo"></span></p>
+          </div>
+          
+          <script>
+          var slider = document.getElementById("BOOK_PRICE");
+          var output = document.getElementById("demo");
+          output.innerHTML = "Please enter a price range";
+          
+          slider.oninput = function() {
+            if (this.value == "-1"){
+              output.innerHTML = "Please enter a price range";
+            }
+            else
+              output.innerHTML = this.value;
+          }
+          </script>
+           <br />
+           <br />
+           <button>Search</button>
+      </form>
+    </div>
+
+  </body>
+</html>
