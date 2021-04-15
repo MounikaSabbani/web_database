@@ -1,8 +1,8 @@
 <?php
 $server = "localhost";
-$username = "";
-$password = "";
-$database = "";
+$username = "ypenamak";
+$password = "Springsemester@2020";
+$database = "ypenamak_db";
 
 
 // Create connection

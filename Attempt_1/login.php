@@ -23,7 +23,7 @@
 				header('Location: /~ypenamak/Project/Attempt1/admin_user.html');
 			}
 			else{
-				header("Location: /~ypenamak/Project/Attempt1/pothole_report.html?username=".$username);
+				header("Location: /~ypenamak/Project/Attempt1/search.html?username=".$username);
 			}
 		}
 		else {
