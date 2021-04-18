@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <meta charset="utf-8" />
+  <style>
+    html, body{       
+        height: 100%;
+        margin: 0;        
+      }   
+    
+    .heading {        
+        text-align: center;       
+        
+    }
+    .instructions {
+      text-align: center;
+    }
+    
+    .search {
+      text-align: center;
+    }
+    .form-group.c1, .form-group.c2 {
+      display : inline-block;
+      width : 20%;
+      text-align: center;      
+    }
+    .button {
+    border: none;
+    color: white;
+    padding: 4px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    }    
+    .search1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    
+    }
+    .search1:hover {
+    background-color: #008CBA;
+    color: white;
+    }
+    .subscribe{
+      background-color: #008CBA;
+      color: brown;
+      width: 10%;
+      font-size: 14px;
+      
+    }
+    .subscribe:hover{
+      background-color: darkred;
+      color: white;
+      opacity: 2;
+      animation: reverse;
+      
+    }
+
+    /* Add a black background color to the top navigation */
+    .topnav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Add a color to the active/current link */
+    .topnav a.home {
+      background-color: #008CBA;
+      color: white;
+    }
+  </style>
+  
+  <head>
+    <title>Welcome to Book Search</title>
+    <!-- Latest compiled CSS v3.4.1 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- jQuery library v3.5.1-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript v3.4.1 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--added for Validation -->
+    <script src="validate_fields.js"></script> 
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body >
+    <main>        
+        <div class="topnav">
+          <a class="home" href="search.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+          <a class = "login" style= "float: right;" href="search.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+          <a class = "signup" style="float: right;" href="search.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>          
+        </div>
+        <div class="heading">
+            <br/><br/>
+            <h1>Best Seller Books</h1>        
+        </div>
+        <div class="instructions">
+            <h5 >Please enter the details below</h5>
+        </div>
+    </main>
+    <div class="search">
+      <!--added for Validation   name = "searchForm" onsubmit="return validateForm()"    added for Validation -->
+      <form name = "searchForm" action="search.php" onsubmit="return validateForm()" method="post">
+        
+        Book Name:<br/><input style="border: 2px solid #333;" type="text" name="BOOK_NAME"/><br/>
+        
+        Book Author:<br/><input style="border: 2px solid #333;" type="text" name="BOOK_AUTHOR"/><br/>
+        
+        Minimum User Rating:<br/><input style="border: 2px solid #333;" type="text" name="BOOK_RATINGS"/><br /><br />
+        
+        <h5>You may choose to enter a range between 2009 and 2019</h5>
+        
+        <div class="form-group c1">
+          Published Year Start: <input style="border: 2px solid #333;" type="number" id="start_year" name="start_year" min="2009" max="2019">
+        </div>
+
+        <div class="form-group c2">
+          Published Year End: <input style="border: 2px solid #333;" type="number" id="end_year" name="end_year" min="2009" max="2019">
+        </div>
+
+        <br /><br /><br /><br />
+
+        <button class= "button search1" ><i style="color: brown;"class="fa fa-spinner fa-spin fa-1x fa-fw"></i>   Search</button>
+
+      </form>
+    </div>
+    <br/><br/>
+    <button onclick="window.location.href = 'search.html'" class="button subscribe" style="position: absolute; right:10px; bottom:10px;">
+      <i class="fa fa-bell-o" aria-hidden="true"></i> Subscribe</button>
+
+  </body>
+</html>
