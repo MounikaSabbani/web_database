@@ -26,6 +26,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript v3.4.1 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="login_validation.js"></script> 
+
   </head>
   <body>
     <main>
@@ -38,12 +40,12 @@
       </div>
     </main>
     <div class="login">
-      <form action="login.php" method="POST">
+      <form name = "loginForm" action="login.php" onsubmit="return validateForm()" method="post">
         User Name:<br />
-        <input type="text" name="UserName" required />
+        <input type="text" name="USERNAME" placeholder="Enter your username" required />
         <br />
         Password:<br />
-        <input type="text" name="Password" required />
+        <input type="text" name="PASSWORD" placeholder="Enter your password" required />
         <br />
         <br />
         <input type="submit" name="submit" />

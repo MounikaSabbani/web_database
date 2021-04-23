@@ -3,8 +3,8 @@
 	
 	include 'dbconnection.php';
     
-	$username = $_POST['UserName'];
-	$password = $_POST['Password'];
+	$username = $_POST['USERNAME'];
+	$password = $_POST['PASSWORD'];
 
 	$sql = "SELECT USERNAME, PASSWORD, ISADMIN FROM LOGIN WHERE USERNAME='$username' and PASSWORD='$password'";
 	$result = mysqli_query($conn, $sql);
