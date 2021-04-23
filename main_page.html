@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Title -->
+  <title>Stories For Kids</title>
+
+    <!-- CSS Styling -->
+  <link rel="stylesheet" href="main_page_style.css" />
+  
+  <style>
+    img {
+      border: 5px solid #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="hbar">
+
+     <center><h1> Welcome to Stories For Kids! </center>
+      <div style="float: center;"></div>
+    </h1>
+  </div>
+
+  <button class="tablink" onclick="openPage('Home')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openPage('About')">About</button>
+  <button class="tablink" onclick="openPage('Search Books')">Search Books</button>
+  <button class="tablink" onclick="openPage('Order Books')">Order Books</button>
+  
+  <div id="Home" class="tabcontent">
+    <div>
+      <a href="story1.php" id="hippo" onclick="document.location=this.id+'.html';return true;" >
+        <img src="hippo_cover.jpeg" width="380" height="300" alt="hippo"/></img>
+      </a>
+
+       <a href="story2.php" id="crickets" onclick="document.location=this.id+'.html';return true;" >
+        <img src="crickets_cover.jpeg" width="380" height="300" alt="crickets"/></img>
+      </a>
+
+      <a href="story3.php" id="Boat" onclick="document.location=this.id+'.html';return true;" >
+        <img src="Cover3.jpg" width="380" height="300" alt="Boat"/></img>
+      </a>
+      <br>
+      <br>
+      <a href="story4.php" id="Penguin" onclick="document.location=this.id+'.html';return true;" >
+        <img src="story4.jpeg" width="380" height="300" alt="Penguin"/></img>
+      </a>
+
+      <a href="story5.php" id="Santa" onclick="document.location=this.id+'.html';return true;" >
+        <img src="cover5.jpeg" width="380" height="300" alt="Santa"/></img>
+      </a>
+    </div>
+  </div>
+
+  <div id="About" class="tabcontent">
+    <h3>About</h3>
+      <p>Stories for Kids.com</p> 
+  </div>
+
+  <div id="Search Books" class="tabcontent">
+    <h3>Search Books</h3>
+    <div>
+      <a href="#"></a>
+    </div>
+  </div>
+
+  <div id="Order Books" class="tabcontent">
+    <h3>Order Books</h3>
+      <p>Place your order</p>
+    </div>
+
+  <script>
+    function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+   
+  </body>
+</html> 

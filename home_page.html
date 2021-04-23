@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <meta charset="utf-8" />
+  <style>
+    html, body{       
+        height: 100%;
+        margin: 0;        
+      }   
+    
+    .heading {        
+        text-align: center;       
+        
+    }
+    .instructions {
+      text-align: center;
+    }
+    
+    .search {
+      text-align: center;
+    }
+    
+    .button {
+    border: none;
+    color: white;
+    padding: 4px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    }    
+    .search1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    
+    }
+    .search1:hover {
+    background-color: #008CBA;
+    color: white;
+    }
+    .subscribe{
+      background-color: darkred;
+      color: white;
+      width: 10%;
+      font-size: 14px;
+      
+    }
+    .subscribe:hover{
+      background-color: #008CBA;
+      color: brown;
+      opacity: 2;
+      animation: reverse;
+      
+    }
+
+    /* Add a black background color to the top navigation */
+    .topnav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Add a color to the active/current link */
+    .topnav a.home {
+      background-color: #008CBA;
+      color: white;
+    }
+    table {
+      width:100%;
+      
+    }
+    table, th, td {
+      border: 2px solid #008CBA;
+      border-collapse: collapse;
+      background-color: #ffc34d;
+    }
+    
+    * {box-sizing: border-box}
+
+/*  .hbar {
+    color :white;
+    padding-top: 0.3px;
+    font-size: 15.5px;
+    font-weight: bold;
+    padding-left: 9px;
+    background: #0088cc;
+  }
+
+  .hbar form {
+    padding-right: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    padding-right: 25px;
+    align-items: center;
+    width: auto;
+    height: 16px;
+  }*/
+
+  /* Style tab links */
+  .tablink {
+    background-color: #ff6666;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    font-weight: bold;
+    width: 33.3%;
+  }
+
+  .tablink:hover {
+    background-color: #777;
+  }
+
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: black;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+  }
+    
+  </style>
+  
+  <head>
+    <title>Stories For Kids</title>
+    <!-- Latest compiled CSS v3.4.1 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- jQuery library v3.5.1-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript v3.4.1 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--added for Validation -->
+    <script src="home_page_validation.js"></script> 
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      img {
+        border: 5px solid #555;
+      }
+    </style>
+
+  </head>
+  <body >
+    <main>        
+        <div class="topnav">
+          <a class="home" href="search.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+
+          <a class = "login" style= "float: right;" href="search.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+          <a class = "signup" style="float: right;" href="search.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>          
+        </div>
+    </main>
+    <div class="search">
+      <form name = "searchForm" action="search.php" onsubmit="return validateForm()" method="post">
+        <table>
+          <tr>
+            <th style="text-align:center">
+              Story Name:<br/><input style="border: 1px solid #333;" type="text" name="STORY_NAME"/><br/>
+            </th>
+            <th style="text-align:center">
+              Author Name:<br/><input style="border: 1px solid #333;" type="text" name="AUTHOR_NAME"/><br/>
+            </th>
+            <th style="text-align: center;">
+              <br/><label for="AGE_GROUP">Age Group:</label>
+                <select id="AGE_GROUP" name="AGE_GROUP">
+                  <option value="" selected="selected">Select</option>
+                  <option value="3-5">Age 3-5</option>
+                  <option value="6-8">Age 6-8</option>
+                  <option value="9-12">Age 9-12</option>
+                </select>
+              <br/>
+            </th>
+            
+            <th style="text-align:center">
+              Published Year:<br/><input style="border: 1px solid #333;" type="number" id="PUB_YEAR" name="PUB_YEAR"><br/>
+            </th>
+            <th style="text-align:center">
+              Genre:<br/><input style="border: 1px solid #333;" type="text" id="STORY_GENRE" name="STORY_GENRE"><br/>
+            </th>
+            <th style="text-align:center">
+              <br/>    
+              <button class= "button search1" ><i style="color: brown;"class="fa fa-search" aria-hidden="true"></i>Search</button>
+            </th>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <br/><br/>
+
+    <div class="hbar">
+      <center><h1> Welcome to Stories For Kids! </center>
+      <div style="float: center;"></div>
+    </h1>
+  </div>
+
+  <button class="tablink" onclick="openPage('Featured Stories')" id="defaultOpen">Featured Stories</button>
+  <button class="tablink" onclick="openPage('About')">About</button>
+  <button class="tablink" onclick="openPage('Order Books')">Order Books</button>
+  
+  <div id="Featured Stories" class="tabcontent">
+    <div>
+      <a href="story1.php" id="hippo" onclick="document.location=this.id+'.html';return true;" >
+        <img src="hippo_cover.jpeg" width="380" height="280" alt="hippo"/></img>
+      </a>
+
+       <a href="story2.php" id="crickets" onclick="document.location=this.id+'.html';return true;" >
+        <img src="crickets_cover.jpeg" width="380" height="280" alt="crickets"/></img>
+      </a>
+
+      <a href="story3.php" id="Boat" onclick="document.location=this.id+'.html';return true;" >
+        <img src="Cover3.jpg" width="380" height="280" alt="Boat"/></img>
+      </a>
+      <br>
+      <br>
+      <a href="story4.php" id="Penguin" onclick="document.location=this.id+'.html';return true;" >
+        <img src="story4.jpeg" width="380" height="280" alt="Penguin"/></img>
+      </a>
+
+      <a href="story5.php" id="Santa" onclick="document.location=this.id+'.html';return true;" >
+        <img src="cover5.jpeg" width="380" height="280" alt="Santa"/></img>
+      </a>
+
+      <a href="story8.php" id="story" onclick="document.location=this.id+'.html';return true;" >
+        <img src="Cover+FCS.jpeg" width="380" height="280" alt="book"/></img>
+      </a>
+    </div>
+  </div>
+
+  <div id="About" class="tabcontent">
+    <h3>About</h3>
+      <p>Stories for Kids.com</p> 
+  </div>
+
+  <div id="Order Books" class="tabcontent">
+    <h3>Order Books</h3>
+      <p>Place your order</p>
+    </div>
+
+  <script>
+    function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+
+  <button onclick="window.location.href = 'search.html'" class="button subscribe" style="position: absolute; right:10px; bottom:-250px;">
+      <i class="fa fa-bell-o" aria-hidden="true"></i> Subscribe</button>
+
+  </body>
+</html>
