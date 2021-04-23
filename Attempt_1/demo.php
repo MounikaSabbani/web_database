@@ -10,8 +10,16 @@
     $phone = $_POST['Phone'];
     $email = $_POST['Email'];
     $address = $_POST['Address'];
-    $subscribe = $_POST['Subscription'];
     
+    if(isset($_POST['Subscription']) && 
+    $_POST['Subscription'] == '1') 
+    {
+        $subscribe = "1";
+    }
+    else
+    {
+        $subscribe = "0";
+    }
 
 	#echo $lastname;
     
