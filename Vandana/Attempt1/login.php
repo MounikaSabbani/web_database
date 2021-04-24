@@ -3,8 +3,8 @@
 	
 	include 'dbconnection.php';
     
-	$username = $_POST['USERNAME'];
-	$password = $_POST['PASSWORD'];
+	$username = $_POST['UserName'];
+	$password = $_POST['Password'];
 
 	$sql = "SELECT USERNAME, PASSWORD, ISADMIN FROM LOGIN WHERE USERNAME='$username' and PASSWORD='$password'";
 	$result = mysqli_query($conn, $sql);
@@ -40,7 +40,7 @@
 	else {
 		echo '<script type="text/javascript">'; 
 		echo 'alert("Wrong username and/or password -- or perhaps you need to register! Try again");';		
-		echo 'window.location.href = "/~ypenamak/Project/Attempt1/index.html"';
+		echo 'window.location.href = "/~ypenamak/Project/Attempt1/login.html"';
 		echo '</script>';
 		mysqli_close($conn);
 	}

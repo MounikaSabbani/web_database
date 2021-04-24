@@ -14,7 +14,15 @@
     .register {
       text-align: center;
     }
+    body {
+    background-image: url('kids_1.jpeg'); 
+ background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+  }
   </style>
+  
   <head>
     <title>Welcome to have fun with Literature</title>
     <!-- Latest compiled CSS v3.4.1 -->
@@ -33,38 +41,36 @@
     <main>
       <div class="heading">
         <br />
-        <h1><b><p style="font-family: Papyrus">Welcome to have fun with Literature</p></b></h1>
+        <h1><b><p style="font-family: Papyrus;font-size:60px";>Welcome to have fun with Literature</p></b></h1>
       </div>
       <div class="instructions">
-        <br/><h4>Please Login Below!</h4><br/>
+        <br/>
+	<h3><b>Please Login Below!</b></h3><br/>
       </div>
     </main>
     <div class="login">
       <form name = "loginForm" action="login.php" onsubmit="return validateForm()" method="post">
-        User Name:<br />
+        <p style="font-size:20px";><b>User Name:<br />
         <input type="text" name="USERNAME" placeholder="Enter your username" required />
         <br />
         Password:<br />
         <input type="text" name="PASSWORD" placeholder="Enter your password" required />
         <br />
         <br />
-        <input type="submit" name="submit" />
+        <input type="submit" name="submit" /></b></p>
+
       </form>
     </div>
     <div class="register">
       <br />
       <br />
-      <br />
-      <br />
-      If you do not have an account Signup by clicking
+      <p style="font-size:20px";><b>If you do not have an account Signup by clicking
       <a href="register.html">HERE!</a>
 
       <br />
       <br />
-      <br />
-      <br />
       If you would like to navigate to book search, click
-      <a href="search.html?username=anonymous">HERE!</a>
+      <a href="search.html?username=anonymous"><b>HERE!</a></b></p>
 
     </div>
     <!-- <div class="row" id="overview">
