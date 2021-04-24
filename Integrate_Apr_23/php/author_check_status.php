@@ -2,8 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Hi Admin</title>
-		  <h1>Story details</h1>
+		<title>Hello, Author!</title>
+		  <h1>Please Check the Status of Your Stories</h1>
 	</head>
 	<body>
 		
@@ -19,9 +19,8 @@
     		<th>Status</th></tr>";
 
 		// get id
-		$sql1 = "SELECT S.Story_id, SI.Author_name, SI.Storyname,SI.Genre, SI.Age_group, SI.Status FROM STORIES S join story_info SI on S.Story_ID = SI.Story_ID
-		and SI.Status = 'Rejected'
-		";
+		$sql1 = "SELECT STORY_ID, STORY_NAME, AUTHOR_NAME, AGE_GROUP, STORY_GENRE, STORY_STATUS 	 FROM STORIES";
+		//WHERE USERNAME_AUTHOR = '$username'";
 
 		$result = mysqli_query($conn, $sql1);
 
@@ -29,7 +28,7 @@
 	    // output data of each row
 		    while($row = mysqli_fetch_assoc($result)) {
 	    	
-				$html = $html."<tr><td>".$row['Story_id']."</td><td>".$row['Author_name']."</td><td>".$row['Storyname']."</td><td>".$row['Genre']."</td><td>".$row['Age_group']."</td><td>".$row['Status']."</td></tr>";
+				$html = $html."<tr><td>".$row['STORY_ID']."</td><td>".$row['AUTHOR_NAME']."</td><td>".$row['STORY_NAME']."</td><td>".$row['STORY_GENRE']."</td><td>".$row['AGE_GROUP']."</td><td>".$row['STORY_STATUS']."</td></tr>";
 	    	}
 		} else {
 		    echo "No results";
@@ -37,8 +36,7 @@
 	
 		$html=$html."</table></html>";
 		echo $html;
-		echo "<a href=\"javascript:history.go(-1)\">GO BACK to Admin Home Page</a>";
-		
+        echo "<a href=\"javascript:history.go(-1)\">GO BACK to Author View</a>";
 		mysqli_close($conn);
 
 		?>

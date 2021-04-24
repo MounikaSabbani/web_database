@@ -6,7 +6,7 @@
 		  <h2>Stories Waiting for Approval</h2>
 	</head>
 	<body>
-		<form action="REVIEW_REJCT_ACCPT.php" method="post">
+		<form action="review_reject_accept.php" method="post">
 		  Enter Story ID : <input type="text" name="StoryID">
     		<select id="status" name="status">
         		<option selected="selected">Update Status</option>
@@ -28,9 +28,9 @@
     		<th>Status</th></tr>";
 
 		// get id
-		$sql1 = "SELECT S.Story_id, SI.Author_name, SI.Storyname,SI.Genre, SI.Age_group, SI.Status FROM STORIES S join story_info SI on S.Story_ID = SI.Story_ID
-		and SI.Status not in  ('Accepted' ,'Rejected')
-		";
+
+		$sql1 = "SELECT STORY_ID, STORY_NAME, AUTHOR_NAME, AGE_GROUP, STORY_GENRE, STORY_STATUS 	 FROM STORIES 
+				 WHERE STORY_STATUS NOT IN ('Accepted',Rejected')";
 
 		$result = mysqli_query($conn, $sql1);
 
@@ -38,7 +38,7 @@
 	    // output data of each row
 		    while($row = mysqli_fetch_assoc($result)) {
 	    	
-				$html = $html."<tr><td>".$row['Story_id']."</td><td>".$row['Author_name']."</td><td>".$row['Storyname']."</td><td>".$row['Genre']."</td><td>".$row['Age_group']."</td><td>".$row['Status']."</td></tr>";
+					$html = $html."<tr><td>".$row['STORY_ID']."</td><td>".$row['AUTHOR_NAME']."</td><td>".$row['STORY_NAME']."</td><td>".$row['STORY_GENRE']."</td><td>".$row['AGE_GROUP']."</td><td>".$row['STORY_STATUS']."</td></tr>";
 	    	}
 		} else {
 			echo "No Stories to Approve";

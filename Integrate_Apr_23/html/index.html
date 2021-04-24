@@ -95,28 +95,7 @@
     }
     
     * {box-sizing: border-box}
-
-/*  .hbar {
-    color :white;
-    padding-top: 0.3px;
-    font-size: 15.5px;
-    font-weight: bold;
-    padding-left: 9px;
-    background: #0088cc;
-  }
-
-  .hbar form {
-    padding-right: 10px;
-    font-size: 13px;
-    font-weight: bold;
-    color: white;
-    padding: 8px 10px;
-    text-align: center;
-    padding-right: 25px;
-    align-items: center;
-    width: auto;
-    height: 16px;
-  }*/
+    
 
   /* Style tab links */
   .tablink {
@@ -129,7 +108,7 @@
     padding: 14px 16px;
     font-size: 17px;
     font-weight: bold;
-    width: 33.3%;
+    width: 50%;
   }
 
   .tablink:hover {
@@ -171,14 +150,15 @@
   <body >
     <main>        
         <div class="topnav">
-          <a class="home" href="search.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+          <a class="home" href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
 
-          <a class = "login" style= "float: right;" href="search.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
-          <a class = "signup" style="float: right;" href="search.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>          
+          <a class = "login" style= "float: right;" href="login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+          <a class = "signup" style="float: right;" href="register.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>          
         </div>
     </main>
     <div class="search">
-      <form name = "searchForm" action="search.php" onsubmit="return validateForm()" method="post">
+      
+      <form name = "searchForm" action="search_story.php" onsubmit="return validateForm()" method="post">
         <table>
           <tr>
             <th style="text-align:center">
@@ -222,7 +202,7 @@
 
   <button class="tablink" onclick="openPage('Featured Stories')" id="defaultOpen">Featured Stories</button>
   <button class="tablink" onclick="openPage('About')">About</button>
-  <button class="tablink" onclick="openPage('Order Books')">Order Books</button>
+  <!--<button class="tablink" onclick="openPage('Order Books')">Order Books</button>-->
   
   <div id="Featured Stories" class="tabcontent">
     <div>
@@ -254,14 +234,18 @@
   </div>
 
   <div id="About" class="tabcontent">
-    <h3>About</h3>
-      <p>Stories for Kids.com</p> 
+    <h3>StoriesForKids.com</h3>
+      <p>Once upon a time, we all grew up listening to stories from our parents, grandparents, aunts, and
+        uncles. Sometimes powerful, sometimes meaningless, sometimes moral-based and sometimes just hilarious! Remember how much you enjoyed this storytime? How magical it was, and how much it made you wonder? Storytelling helps improve key areas like memory and language skills, it sparks curiosity which increases the child’s imaginative skills, and it gives the child new perceptions of the world around them every single time.Unfortunately today, storytelling is slowly becoming obsolete because parents are themselves busy and they hardly come up with any creative stories when their kids like to listen.<br><br>
+
+        Here, we are developing a web-based application to address the same issue that includes stories with illustrations and pictures from various genres for kids that range between the age groups 3-12.
+        Our website would make the parent’s lives easier to read stories to their kids with just one search. This digital application will come in handy whenever they want to listen to stories such as during bedtime, bath time, on the train, in the bus, in the car, in the park, in the pram, in the cot, any time is a good time for a story!</p> 
   </div>
 
-  <div id="Order Books" class="tabcontent">
+  <!--<div id="Order Books" class="tabcontent">
     <h3>Order Books</h3>
       <p>Place your order</p>
-    </div>
+    </div>-->
 
   <script>
     function openPage(pageName,elmnt,color) {
@@ -282,7 +266,7 @@
   document.getElementById("defaultOpen").click();
   </script>
 
-  <button onclick="window.location.href = 'search.html'" class="button subscribe" style="position: absolute; right:10px; bottom:-250px;">
+  <button onclick="window.location.href = 'subscription.html'" class="button subscribe" style="position: absolute; right:10px; bottom:-250px;">
       <i class="fa fa-bell-o" aria-hidden="true"></i> Subscribe</button>
 
   </body>
