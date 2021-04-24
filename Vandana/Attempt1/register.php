@@ -5,6 +5,7 @@
     $username = $_POST['UserName'];
     $password = $_POST['Password'];
     $confirm  = $_POST['ConfirmPassword'];
+    $author = $_POST['Author'];
 
     
 	$sql = "SELECT USERNAME FROM LOGIN";
@@ -26,7 +27,7 @@
     }
     if ($exists == 0) {
         $msg = "Thank you for registering!";
-        $sql = "INSERT INTO LOGIN (USERNAME, PASSWORD, CONFIRM_PASSWORD, ISADMIN, ISAUTHOR) VALUES ('$username', '$password', '$confirm', 0, 0)";
+        $sql = "INSERT INTO LOGIN (USERNAME, PASSWORD, CONFIRM_PASSWORD, ISADMIN, ISAUTHOR) VALUES ('$username', '$password', '$confirm', 0, $author)";
         $sql2 = "INSERT INTO SIGNUP (USERNAME) VALUES ('$username', '', '', '', '', '', '', '')";
         mysqli_query($conn, $sql);
         mysqli_query($conn, $sql2);

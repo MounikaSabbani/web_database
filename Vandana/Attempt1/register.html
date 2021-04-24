@@ -74,9 +74,6 @@ body {
         <br />
 <br />
 <br />
-<br />
-<br />
-
         <h2>Please Signup Below!</h2>
 <br />
 
@@ -84,7 +81,7 @@ body {
     </main>
     <div class="register">
       <form name = "registerForm" action="register.php" onsubmit="return validateForm()" method="post">
-        <p style="font-size:20px"><b>User Name:<br />
+        <p style="font-size:13px"><b>User Name:<br />
         <input type="text" name="UserName" required/>
         <br />
         Password:<br />
@@ -94,6 +91,10 @@ body {
         <input type="password" name="ConfirmPassword" required/>
         <br />
         <br />
+
+        If you want to be an Author, check the below box:<br />
+        <input type="checkbox" name="Author" value="1" />
+        <br /><br />
 
         <input type="submit" name="submit" /></b></p>
       </form>
