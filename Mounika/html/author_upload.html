@@ -65,7 +65,7 @@
     </div>
     
     <div class="upload">
-    <form name = "uploadForm" action="upload_story.php" onsubmit="return validateForm()" method="post">
+    <form name = "uploadForm" action="upload_story.php" onsubmit="return validateForm()" method="post" enctype="multipart/form-data">
 
         <b> Story Title: </b><br>
           <input type="text" name="STORY_NAME" placeholder="Enter the Story Title">
@@ -87,12 +87,11 @@
         <input type="number" name="PUB_YEAR" placeholder="Enter year like 2010 or 2012">
         <br><br>
         <b> Story Ratings: </b><br>
-        <input type="text" name="STORY_RATINGS" placeholder="Enter values such as 4.3 or 4.5">
+        <input type="text" name="STORY_RATINGS" placeholder="Example: 4.3 or 4.5">
         <br><br>
         <b> Story Image: </b><br>
         <input type="file" id="file" name="STORY_IMAGE" placeholder="Upload your images here">
-        <br />
-        <br>
+        <br><br>
 
       <input class="tabbutton" type="submit" name="submit">
     </div>

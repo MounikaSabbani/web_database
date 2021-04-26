@@ -13,7 +13,7 @@ function validateForm() {
   var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
               
   if (!allowedExtensions.exec(filePath)) {
-      alert('Invalid file type! Accepts only jpg, jpeg, png or gif extensions!');
+      alert('Sorry! Accepts only jpg, jpeg, png or gif extensions!');
       fileInput.value = '';
       return false;
       } 

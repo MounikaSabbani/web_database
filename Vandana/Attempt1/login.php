@@ -1,10 +1,14 @@
-
 <?php
 	
 	include 'dbconnection.php';
+	$username = $_POST['USERNAME'];
+	$password = $_POST['PASSWORD'];
+	/*echo '$username';
+	session_start();
+	$_SESSION["username"] = $username;
+	$_SESSION["password"] = $password;
     
-	$username = $_POST['UserName'];
-	$password = $_POST['Password'];
+	echo "Hi ".$_SESSION["username"];*/
 
 	$sql = "SELECT USERNAME, PASSWORD, ISADMIN, ISAUTHOR FROM LOGIN WHERE USERNAME='$username' and PASSWORD='$password'";
 	$result = mysqli_query($conn, $sql);
@@ -22,6 +26,8 @@
 		
 		if (mysqli_num_rows($info) > 0) {
 			mysqli_close($conn);
+			if ($isadmin == 1 ) {
+				
 				header('Location: /~msabbani/web_project/admin_user.html');
 			}
 			else if ($isauthor == 1) {
@@ -29,6 +35,7 @@
 			}
 			else{
 				header("Location: /~msabbani/web_project/index.html?username=".$username);
+				//?username=".$username
 			}
 		}
 		else {
@@ -49,10 +56,5 @@
 		echo '</script>';
 		mysqli_close($conn);
 	}
-
-	
-	
-
-
 
 ?>
