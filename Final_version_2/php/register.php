@@ -5,6 +5,7 @@
     $username = $_POST['UserName'];
     $password = $_POST['Password'];
     $confirm  = $_POST['ConfirmPassword'];
+$author = $_POST['Author'];
    
 if ($author=="")
     	{
