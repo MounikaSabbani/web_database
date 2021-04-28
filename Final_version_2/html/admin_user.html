@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <style>
+    .instructions {
+      text-align: center;
+    }
+    .register {
+      text-align: center;
+    }
+  </style>
+  <head>
+    <title>Literature for kids</title>
+    <!-- Latest compiled CSS v3.4.1 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- jQuery library v3.5.1-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript v3.4.1 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="instructions">
+        <br />
+        <h3>You ARE AN ADMIN!!!!</h3>
+      </div>
+    </main>
+    <div class="register">
+      <br />
+      <br />
+      <br />
+      <p>If you would like to see the admin view, Submit below</p>
+      <br />
+      <form action="../php/admin_view.php" method="POST">
+        <input type="submit" name="submit" />
+      </form>
+      <br />
+      <p>If you would like to search for stories, Submit below</p>
+      <br />
+      <form action="../php/index.php" method="POST">
+        <input type="submit" name="submit" />
+      </form>
+    </div>
+    <script></script>
+  </body>
+</html>

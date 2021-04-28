@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <style>
+    .heading {
+      text-align: center;
+    }
+    .instructions {
+      text-align: center;
+    }
+    .login {
+      text-align: center;
+    }
+    .register {
+      text-align: center;
+    }
+    body {
+    background-image: url('../Pics/kids_1.jpeg'); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+  }
+  /* Add a black background color to the top navigation */
+  .topnav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      background-color: darkred;
+      color: white;
+    }
+
+    /* Add a color to the active/current link */
+    .topnav a.home {
+      background-color: #008CBA;
+      color: white;
+    }
+
+    .topnav a.home:hover{
+      background-color: darkred;
+    }
+  </style>
+  
+  <head>
+    <title>Welcome to have fun with Literature</title>
+    <!-- Latest compiled CSS v3.4.1 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- jQuery library v3.5.1-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript v3.4.1 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="../js/login_validation.js"></script> 
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    <main>
+      <div class="topnav">
+          <a class="home" href="../php/index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a>          
+          <a class = "signup" style="float: right;" href="register.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>
+          <a class = "subscribe" style= "float: right;" href="subscription.html"><i class="fa fa-bell-o" aria-hidden="true"></i> Subscribe</a>          
+      </div>
+    
+      <div class="heading">
+        <br />
+        <h1><b><p style="font-family: Papyrus;font-size:60px";>Welcome to have fun with Literature</p></b></h1>
+      </div>
+      <div class="instructions">
+       
+	<h3><b>Please Login Below!</b></h3><br/>
+      </div>
+    </main>
+    <div class="login">
+      <form name = "loginForm" action="../php/login.php" onsubmit="return validateForm()" method="post">
+        <p style="font-size:15px";><b>User Name:<br />
+        <input type="text" name="USERNAME" placeholder="Enter your username" required />
+        <br />
+        Password:<br />
+        <input type="password" name="PASSWORD" placeholder="Enter your password" required />
+        <br />
+        <br />
+        <input type="submit" name="submit" /></b></p>
+
+      </form>
+    </div>
+    
+    <!--<div class="register">
+      <br />
+      <br />
+      <p style="font-size:20px";><b>If you do not have an account Signup by clicking on SIGNUP tab
+      
+
+      <br />
+      <br />
+      If you would like to navigate to book search, click on HOME tab
+      </b></p>
+
+    </div>-->
+    <!-- <div class="row" id="overview">
+        <div class="col-sm-3"> -->
+    <script></script>
+  </body>
+</html>
