@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <style>
+    .instructions {
+      text-align: center;
+    }
+    .demo {
+      text-align: center;
+    }
+body {
+    background-image: url('kids.jpeg'); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+  }
+  /* Add a black background color to the top navigation */
+  .topnav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      background-color: darkred;
+      color: white;
+    }
+
+    /* Add a color to the active/current link */
+    .topnav a.home {
+      background-color: #008CBA;
+      color: white;
+    }
+
+    .topnav a.home:hover{
+      background-color: darkred;
+    }
+  </style>
+  <head>
+    <title>Fun with literature</title>
+    <!-- Latest compiled CSS v3.4.1 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- jQuery library v3.5.1-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript v3.4.1 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- validation file -->
+    <script src="demographic_validation.js"></script> 
+
+  </head>
+  <body>
+    <main>
+      <div class="topnav">
+        <a class="home" href="index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a>          
+                  
+    </div>
+      <div class="instructions">
+        <br />
+    <br />
+    <br />
+        <h3><b>Please provide Demographic Info below!</h3>
+      </div>
+    </main>
+    <div class="demo">
+      <form name = "demoForm" action="demo.php" onsubmit="return validateForm()" method="post">
+        <p style="font-size:15px";>User Name:<br />
+        <input type="text" id="UserName" name="UserName" readonly />
+        <br />
+        First Name:<br />
+        <input type="text" name="FirstName" placeholder="Enter First Name" required />
+        <br />
+        Last Name:<br />
+        <input type="text" name="LastName" placeholder="Enter Last Name" required />
+        <br />
+        Middle Name:<br />
+        <input type="text" name="MiddleName" placeholder="Enter Middle Initial" required />
+        <br />
+        Phone:<br />
+        <input type="text" name="Phone" placeholder="XXX-XXX-XXXX" required />
+        <br />
+        Email Address:<br />
+        <input type="text" name="Email" placeholder="Eg: jack.jill@gmail.com" required />
+        <br />
+        Address for Delivery:<br />
+        <textarea id="Address" name="Address" rows="4" cols="20" placeholder="Enter your address here.." required/></textarea>
+        <br /><br/>
+        <!--If you want to subscribe, check the below box:<br />
+        <input type="checkbox" name="Subscription" value="1" />-->
+        <br />
+
+        <input type="submit" name="submit" required /></b></p>
+      </form>
+    </div>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const myParam = urlParams.get("username");
+      document.getElementById("UserName").value = myParam;
+    </script>
+  </body>
+</html>
