@@ -260,7 +260,7 @@
   </div>
 
   <div id="About" class="tabcontent">
-    <h3>StoriesForKids.com</h3>
+    <h3>LittleBibliophile.com</h3>
       <p>Once upon a time, we all grew up listening to stories from our parents, grandparents, aunts, and
         uncles. Sometimes powerful, sometimes meaningless, sometimes moral-based and sometimes just hilarious! Remember how much you enjoyed this storytime? How magical it was, and how much it made you wonder? Storytelling helps improve key areas like memory and language skills, it sparks curiosity which increases the child’s imaginative skills, and it gives the child new perceptions of the world around them every single time.Unfortunately today, storytelling is slowly becoming obsolete because parents are themselves busy and they hardly come up with any creative stories when their kids like to listen.<br><br>
 
