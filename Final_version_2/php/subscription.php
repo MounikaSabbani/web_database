@@ -21,7 +21,7 @@ if ($exists > 0 ){
     mysqli_close($conn);
     include('subscription.html');
     
-    echo "<a href=\"index.html\"> GO BACK to Home Page</a>";
+    echo "<a href=\"index.php\"> GO BACK to Home Page</a>";
     
  } else {
 $sql1 = "SELECT MAX(SUBSCRIBER_ID) AS MAX_ID_CURRENT FROM SUBSCRIBED_EMAIL_DETAILS";

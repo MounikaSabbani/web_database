@@ -205,7 +205,7 @@
             </th>
             
             <th style="text-align:center">
-              Published Year:<br/><input style="border: 1px solid #333;" type="number" id="PUB_YEAR" name="PUB_YEAR"><br/>
+              Published Year:<br/><input style="border: 1px solid #333;" type="number" id="PUB_YEAR" name="PUB_YEAR" min="1900" max="2021"><br/>
             </th>
             <th style="text-align:center">
               Genre:<br/><input style="border: 1px solid #333;" type="text" id="STORY_GENRE" name="STORY_GENRE"><br/>
@@ -221,7 +221,7 @@
     <br/><br/>
 
     <div class="hbar">
-      <center><h1> Welcome to Stories For Kids! </center>
+      <center><h1> Welcome to LITTLE BIBLIOPHILE! </center>
       <div style="float: center;"></div>
     </h1>
   </div>

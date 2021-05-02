@@ -25,7 +25,7 @@
 
     * {box-sizing: border-box}
     body {
-        background-image: url("author.jpeg");
+        background-image: url("../Pics/author.jpeg");
         background-repeat: no-repeat;
         background-size: cover;
         background-opacity: 0.5;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 28, 2021 at 01:05 AM
+-- Generation Time: May 02, 2021 at 06:11 PM
 -- Server version: 10.3.25-MariaDB-0ubuntu0.20.04.1
 -- PHP Version: 7.4.3
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `msabbani_db`
+-- Database: `ypenamak_db`
 --
 
 -- --------------------------------------------------------
@@ -42,19 +42,24 @@ CREATE TABLE `LOGIN` (
 --
 
 INSERT INTO `LOGIN` (`LOGIN_ID`, `USERNAME`, `PASSWORD`, `CONFIRM_PASSWORD`, `ISAUTHOR`, `ISADMIN`) VALUES
-(1, 'Tom', 'adminpwd', 'adminpwd', 0, 1),
+(1, 'nag', 'leg', 'leg', 0, 1),
 (4, 'naga', 'eye', 'eye', 1, 0),
 (5, 'sid', 'sid', 'sid', 1, 0),
 (6, 'fat', 'fit', 'fit', 1, 0),
-(7, 'test', 'user', 'user', 0, 0),
-(8, 'ak22', 'ak22', 'ak22', 1, 0),
-(9, 'web', 'web', 'web', 0, 0),
-(10, 'sab', 'sab', 'sab', 0, 0),
-(11, 'moun', 'moun', 'moun', 0, 0),
-(12, 'sab', 'moun', 'moun', 0, 0),
-(13, 'kavitha', '1234', '1234', 0, 0),
-(14, 'ak44', 'ak44', 'ak44', 0, 0),
-(15, 'user1', 'pass1', 'pass1', 0, 0);
+(7, 'jag', 'jag', 'jag', 0, 0),
+(8, 'jag', 'jag', 'jag', 0, 0),
+(9, 'jim', 'jim', 'jim', 0, 0),
+(10, 'lol', 'lol', 'lol', 0, 0),
+(11, 'saede', 'aa', 'aa', 0, 0),
+(13, '$username', '$password', '$confirm', 0, 0),
+(17, 'kid', 'kid', 'kid', 0, 0),
+(19, 'lisa', 'lisa', 'lisa', 0, 0),
+(20, 'sunday', 'sunday', 'sunday', 0, 0),
+(21, 'ajklio', 'ajklio', 'ajklio', 0, 0),
+(22, 'cvbnmkj', 'cvbn', 'cvbn', 0, 0),
+(23, 'tyuiop', 'tyuiop', 'tyuiop', 1, 0),
+(24, 'test_user', 'user', 'user', 1, 0),
+(25, 'newuser', 'newuser', 'newuser', 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -74,7 +79,7 @@ ALTER TABLE `LOGIN`
 -- AUTO_INCREMENT for table `LOGIN`
 --
 ALTER TABLE `LOGIN`
-  MODIFY `LOGIN_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `LOGIN_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 28, 2021 at 01:06 AM
+-- Generation Time: May 02, 2021 at 06:11 PM
 -- Server version: 10.3.25-MariaDB-0ubuntu0.20.04.1
 -- PHP Version: 7.4.3
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `msabbani_db`
+-- Database: `ypenamak_db`
 --
 
 -- --------------------------------------------------------
@@ -44,23 +44,26 @@ CREATE TABLE `SIGNUP` (
 
 INSERT INTO `SIGNUP` (`USERNAME`, `FIRSTNAME`, `LASTNAME`, `MIDDLENAME`, `PHONE`, `EMAIL`, `ADDRESS`) VALUES
 ('$username', '$firstname', '$lastname', '$fullname', '$phone', '$email', '$address'),
-('admin', 'admin', 'user', 's', '845-978-8523', 'admin.user@gmail.com', 'cbkbcwdl'),
-('ak22', 'ak22', '22', 'none', '459-879-9651', 'hvbhvhkwh', 'bwkjbvksd'),
+('abbarrer', 'test', 'test', 'test', 'test', 'test', 'test'),
+('ajklio', 'ajklio', 'ajklio', 'ajklio', '5136936535', 'asdasd@gmail.com', 'asfafdf'),
+('cvbnmkj', 'cvbnmkl', 'cvbnmkl', 'cvbnmkl', '8794561222', 'asdasf@sgsfs.comq', 'sdfdsfs'),
 ('fat', 'asda', 'sdfs', 'sdfsd', '1423', 'dsfsddrg', 'dfgbhrt'),
 ('Jim', 'Jim', 'Peters', 'Jim Peters', '1231231234', 'jim@gmail.com', 'Chicago'),
 ('John', 'John', 'Peters', 'John Peters', '1231231234', 'john@gmail.com', 'Chicago'),
 ('kandem', 'rrrr', 'A', 'rrrr A', '1234567891', 'kk@gmail.com', '101 NE st carmel IN'),
-('kav', 'Kav', 'Kavi', 'K', '317-123-1234', 'kandem@iu.edu', 'NA'),
-('kavitha', 'kavitha', 'kavitha', 'kavitha', '317-123-1234', 'kk@gmail.com', 'NA'),
-('kavitha1', 'Kav', 'Kavi', 'K', '317-123-1234', 'kandem@iu.edu', 'NA'),
-('kavitha2', 'Kav', 'Kavi', 'A', '317-123-1234', 'kandem@iu.edu', 'NA'),
-('kavitha5', 'Kav', 'kavi', 'K', '317-123-1234', 'kandem@iu.edu', 'NA'),
+('kid', 'dsase', 'dfcse', 'dsfsd', '123-345-4567', 'sdcedrf', 'sadfresr'),
+('lisa', 'awdawse', 'sdfsd', 'sdfsd', '123-345-5678', 'zXzaDsc', 'sdfer'),
+('lol', 'asdse', 'asdd', 'cfzxc', '13231', 'scadd', 'szxc'),
 ('nag', 'szcfsd', 'xdvgds', 'sdvgdsfr', '1445', 'xvgd', 'dsfe'),
 ('naga', 'sdfs', 'sdfds', 'dvfdtrg', '13342', 'fdbbfgnb', 'asfedfb'),
-('sid', 'sid', 'sid', 'sid', '317-123-1234', 'kandem@iu.edu', 'NA'),
+('newuser', 'new', 'user', 'n', '317-111-1211', 'new.user@gmail.com', '101 NE st carmel IN'),
+('pena', 'John', 'Peters', 'John Peters', '1231231234', 'john@gmail.com', 'dfgfd'),
+('sid', 'cxvfvd', 'sdzf', 'sdvf', '1234', 'fdgrgtr', 'fgtretgr'),
 ('sri', 'dhsrgfhesgf', 'ssdnfhsv', 'sdgchgsf', '235462', 'hhfdvgdhsgg', 'sdfef'),
 ('steve111', 'Steve', 'Perkins', 'Steve Perkins', '1231231234', 'steve@gmail.com', 'Indiana'),
-('Tom', 'Tom', 'Admin', 'S', '879-985-6214', 'tom.admin@user.com', 'Indianapolis'),
+('sunday', 'Sunday', 'Weekend', 'S', '123-456-1234', 'sunday.weekend@gmail.com', 'DC'),
+('test_user', 'test ', 'user', 'u', '459-987-9663', 'test.user@user.com', 'kvbvkbjkn'),
+('tyuiop', 'tyuiop', 'tyuiop', 'tyuiop', '4564564564', 'asasdasd@@gdgf', 'sfdsfdsf'),
 ('vandana', 'sfs', 'dsfsa', 'dsfs', '3435', 'vbfdf', 'dfgd'),
 ('yamini', 'yamini sri vandana', 'penamakuru', 'yamini sri vandana', '4638671663', 'ypenamak@iu.edu', '7415 montgomery road');
 
