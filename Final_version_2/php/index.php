@@ -147,7 +147,7 @@
   </style>
   
   <head>
-    <title>Stories For Kids</title>
+    <title>Little Bibliophile</title>
     <!-- Latest compiled CSS v3.4.1 -->
     <link
       rel="stylesheet"
