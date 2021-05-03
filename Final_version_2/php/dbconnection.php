@@ -1,9 +1,9 @@
 <?php
 $server = "localhost";
-$username = "ypenamak";
-$password = "Springsemester@2020";
-$database = "ypenamak_db";
-//$file_location = "/~ypenamak/Project/Attempt1/";
+$username = "";
+$password = "";
+$database = "";
+//$file_location = "/~username/";
 
 
 // Create connection
