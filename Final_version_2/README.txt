@@ -49,7 +49,8 @@ II. Setup and Accessibility of the Application:
 			21. author_display_story.php - allows author to check the story he has uploaded here.
 
 		NOTE: We have included the db.connection file in order to let you enter your details on the file and you may upload the same on the server to view the pages without any issues. 
-		Please enter these details and upload accordingly before testing out the application.
+		Please enter these details and upload accordingly before testing out the application and 
+		-uncomment the line with $file_location = "/~username/"  on the db.connection file and give the appropriate path where all the files are placed.
 		
 		c) JS Files - 
 			1. home_page_validation.js - validates the fields on the home page.
