@@ -3,7 +3,7 @@ $server = "localhost";
 $username = "";
 $password = "";
 $database = "";
-//$file_location = "/~username/Project/Attempt1/";
+//$file_location = "/~username/";
 
 
 // Create connection
